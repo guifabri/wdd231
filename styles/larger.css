@@ -42,12 +42,13 @@
   .nav-menu a:hover,
   .nav-menu a:focus-visible {
     background-color: var(--color-dark-hover);
-    color: var(--color1);
+    color: #FFFFFF;
   }
 
   .nav-menu a.active {
-    background-color: #3e3935;
-    border-bottom: 3px solid var(--color4);
+    background-color: var(--color4);
+    color: #FFFFFF;
+    border-bottom: 3px solid var(--color2);
   }
 
   /* Desktop Main Layout: 2 Columns for top cards, full width for courses */
@@ -147,4 +148,3 @@
     font-size: 1.08rem;
   }
 }
-
