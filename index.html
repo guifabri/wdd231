@@ -1,13 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231: Web Frontend Development I - Erick Scala</title>
+  <meta name="description" content="Course home page for WDD 231: Web Frontend Development I by Erick Scala, featuring web certificate courses, student background, and frontend projects.">
+  <meta name="author" content="Erick Scala">
 
+  <!-- Google Fonts: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- External Scripts with defer -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-    <h1>WDD 231 - Erick</h1>
+  <!-- Header Component -->
+  <header>
+    <div class="header-top">
+      <a href="index.html" class="branding" aria-label="Erick Scala Home">
+        <img src="images/logo.svg" alt="Erick Scala Monogram Logo" width="44" height="44">
+        <span>Erick Scala</span>
+      </a>
+      <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
+    </div>
+    <!-- Responsive Navigation Component -->
+    <nav id="primaryNav" aria-label="Primary Navigation">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="chamber/directory.html">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Home</h1>
+
+    <!-- Section 1: About Me -->
+    <section class="card about-card">
+      <h2>About Me</h2>
+      <div class="card-body">
+        <p>
+          Hello! My name is <strong>Erick Scala</strong>, and I live in <strong>Ureña, Táchira, Venezuela</strong>. I am currently pursuing my degree in Software Development at BYU-Pathway Worldwide with a focus on web frontend engineering.
+        </p>
+        <p>
+          I am passionate about building modern, responsive, and accessible digital experiences that empower communities. Through WDD 231, I look forward to mastering JavaScript APIs, component architecture, and advanced CSS design patterns.
+        </p>
+        <p>
+          When I'm not coding, I enjoy learning about emerging technologies, solving algorithmic puzzles, and spending quality time with family.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Student Photo -->
+    <section class="card photo-card">
+      <h2>Student Photo</h2>
+      <div class="card-body">
+        <img src="images/profile.webp" alt="Portrait photo of Erick Scala" width="220" height="489" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Section 3: Web Certificate Courses -->
+    <section class="card courses-card">
+      <h2>Web Certificate Courses</h2>
+      <div class="card-body">
+        <!-- Filter buttons -->
+        <div class="filter-controls" role="group" aria-label="Course filter controls">
+          <button id="allCourses" class="filter-btn active" type="button">All</button>
+          <button id="cseCourses" class="filter-btn" type="button">CSE</button>
+          <button id="wddCourses" class="filter-btn" type="button">WDD</button>
+        </div>
+
+        <!-- Dynamic course cards container -->
+        <div id="courseContainer" class="course-container" aria-live="polite"></div>
+
+        <!-- Total credits calculated with reduce() -->
+        <p id="totalCredits" class="total-credits"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer>
+    <div class="footer-content">
+      <!-- Social Media Links -->
+      <div class="social-links" aria-label="Social media profiles">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 1 0-.02-3.36 1.68 1.68 0 0 0 .02 3.36m1.39 9.74v-8.37H5.07v8.37h2.78Z"/>
+          </svg>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
+          </svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter) Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Copyright & Student Information -->
+      <p>&copy; <span id="currentyear"></span> Erick Scala &bull; Ureña, Táchira, Venezuela</p>
+
+      <!-- Dynamic Last Modified String -->
+      <p id="lastModified"></p>
+    </div>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,410 @@
+/* ==========================================================================
+   Base & Mobile-First Styles (small.css)
+   Course: WDD 231 - Web Frontend Development I
+   Student: Erick Scala
+   ========================================================================== */
+
+:root {
+  /* User-defined palette */
+  --color1: #FFFFFF;
+  --color2: #F4F1EC;
+  --color3: #E8E2D8;
+  --color4: #DAD3C6;
+  --color5: #CFC7B8;
+
+  /* Accessible high-contrast typography & structural accents */
+  --color-dark: #221f1d;
+  --color-dark-hover: #383430;
+  --color-text-main: #1d1b19;
+  --color-text-muted: #4e4a46;
+  --color-border: #b8b0a2;
+
+  /* Completed course indicators */
+  --color-completed-bg: #274734;
+  --color-completed-text: #FFFFFF;
+  --color-completed-border: #1c3526;
+
+  /* Font settings */
+  --font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --border-radius: 6px;
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color2);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+header {
+  background-color: var(--color1);
+  border-bottom: 1px solid var(--color4);
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.branding img {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.branding span {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Hamburger button for mobile */
+#menuButton {
+  display: block;
+  background: transparent;
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
+  border-radius: var(--border-radius);
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: var(--transition);
+}
+
+#menuButton:hover,
+#menuButton:focus-visible {
+  background-color: var(--color4);
+  outline: 2px solid var(--color-dark);
+}
+
+/* ==========================================================================
+   Navigation Component
+   ========================================================================== */
+nav {
+  background-color: var(--color-dark);
+  width: 100%;
+}
+
+.nav-menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Toggled open on mobile */
+.nav-menu.open {
+  display: flex;
+}
+
+.nav-menu li {
+  width: 100%;
+  border-bottom: 1px solid #383430;
+}
+
+.nav-menu li:last-child {
+  border-bottom: none;
+}
+
+.nav-menu a {
+  display: block;
+  color: var(--color1);
+  text-decoration: none;
+  padding: 0.85rem 1.25rem;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus-visible {
+  background-color: var(--color-dark-hover);
+  color: var(--color3);
+}
+
+.nav-menu a.active {
+  background-color: #4a4540;
+  color: var(--color1);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Main Content Component
+   ========================================================================== */
+main {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+h1 {
+  font-size: 1.85rem;
+  color: var(--color-dark);
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+/* Card Structure matching the wireframe/screenshots */
+.card {
+  background-color: var(--color3);
+  border: 1px solid var(--color4);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  background-color: var(--color-dark);
+  color: var(--color1);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.card-body {
+  padding: 1.25rem;
+}
+
+/* About Me section */
+.about-card p {
+  margin-bottom: 0.85rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+}
+
+.about-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Student Photo section */
+.photo-card .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--color2);
+}
+
+.photo-card img {
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 335 / 745;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color4);
+  background-color: var(--color1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   Courses Section & Filtering
+   ========================================================================== */
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1 1 80px;
+  max-width: 140px;
+  background-color: var(--color4);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.55rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  background-color: var(--color5);
+  border-color: var(--color-dark);
+}
+
+.filter-btn.active {
+  background-color: var(--color-dark);
+  color: var(--color1);
+  border-color: var(--color-dark);
+}
+
+/* Course Cards Container */
+.course-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.course-pill {
+  background-color: var(--color4);
+  border: 1px solid var(--color-border);
+  color: var(--color-dark);
+  padding: 0.85rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  text-align: center;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.course-pill .course-code {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.course-pill .course-title {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* Visual differentiation for completed courses */
+.course-pill.completed {
+  background-color: var(--color-completed-bg);
+  border-color: var(--color-completed-border);
+  color: var(--color-completed-text);
+}
+
+.course-pill.completed .course-title {
+  color: #d1e7dd;
+}
+
+.course-pill.completed .status-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #a3cfbb;
+}
+
+.course-pill:not(.completed) .status-badge {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #726859;
+}
+
+/* Total credits statement */
+.total-credits {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  padding: 0.75rem 0.5rem 0;
+  border-top: 1px solid var(--color4);
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+footer {
+  background-color: var(--color3);
+  border-top: 1px solid var(--color4);
+  padding: 1.75rem 1rem 1.5rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.social-links a {
+  color: var(--color-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: #000000;
+  transform: translateY(-2px);
+  background-color: var(--color4);
+}
+
+.social-links svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+#lastModified {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
