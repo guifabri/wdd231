@@ -159,3 +159,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial render: Display all courses
   displayCourses(courses);
 });
+

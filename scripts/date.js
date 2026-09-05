@@ -17,3 +17,4 @@ document.addEventListener('DOMContentLoaded', () => {
     lastModifiedEl.textContent = `Last Modification: ${document.lastModified}`;
   }
 });
+
