@@ -310,8 +310,8 @@ h1 {
 
 .course-pill .course-title {
   font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
+  font-weight: 500;
+  color: var(--color-dark);
 }
 
 /* Visual differentiation for completed courses */
@@ -322,19 +322,19 @@ h1 {
 }
 
 .course-pill.completed .course-title {
-  color: var(--color2);
+  color: #FFFFFF;
 }
 
 .course-pill.completed .status-badge {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color1);
+  color: #FFFFFF;
 }
 
 .course-pill:not(.completed) .status-badge {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--color3);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-dark);
 }
 
 /* Total credits statement */
