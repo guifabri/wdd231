@@ -1,0 +1,23 @@
+{
+  "family_name": "Scala",
+  "move_in_date": "2017-08-24",
+  "number_of_people": 3,
+  "visited_by_bishopric": true,
+  "family_members": [
+    {
+      "name": "Erick Scala",
+      "gender": "Male",
+      "birthdate": "1984-07-24"
+    },
+    {
+      "name": "Briggitt Marquez",
+      "gender": "Female",
+      "birthdate": "1988-12-18"
+    },
+    {
+      "name": "Fabrizzio Scala",
+      "gender": "Male",
+      "birthdate": "2010-03-05"
+    }
+  ]
+}
