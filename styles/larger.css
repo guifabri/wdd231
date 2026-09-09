@@ -51,7 +51,7 @@
     border-bottom: 3px solid var(--color2);
   }
 
-  /* Desktop Main Layout: 2 Columns for top cards, full width for courses */
+  /* Desktop Main Layout */
   main {
     padding: 2rem 2rem 3rem;
     display: grid;
@@ -127,6 +127,18 @@
   .total-credits {
     font-size: 1.15rem;
     padding-top: 1rem;
+  }
+
+  /* ==========================================================================
+     Prophets Page Adjustments (Desktop)
+     ========================================================================== */
+  
+  /* Permite que el contenedor de tarjetas ocupe todo el ancho del main */
+  #cards {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 
   /* Footer adjustments */

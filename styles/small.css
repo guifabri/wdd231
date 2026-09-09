@@ -179,6 +179,7 @@ h1 {
   color: var(--color-dark);
   margin-bottom: 0.25rem;
   font-weight: 700;
+  text-align: center;
 }
 
 /* Card Structure matching the wireframe/screenshots */
@@ -310,8 +311,6 @@ h1 {
 
 .course-pill .course-title {
   font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
   font-weight: 500;
   color: var(--color-dark);
 }
@@ -323,22 +322,14 @@ h1 {
   color: var(--color-completed-text);
 }
 
-.course-pill.completed .course-title {
-  color: var(--color2);
-  color: #FFFFFF;
-}
-
+.course-pill.completed .course-title,
 .course-pill.completed .status-badge {
+  color: #FFFFFF;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color1);
-  color: #FFFFFF;
 }
 
 .course-pill:not(.completed) .status-badge {
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--color3);
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-dark);
@@ -352,6 +343,54 @@ h1 {
   color: var(--color-dark);
   padding: 0.75rem 0.5rem 0;
   border-top: 1px solid var(--color2);
+}
+
+/* ==========================================================================
+   Latter-day Prophets Cards Grid Component
+   ========================================================================== */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+#cards section {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color2);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(29, 45, 68, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 420px; /* Previene el colapso visual inicial del layout */
+}
+
+#cards section h2 {
+  color: var(--color-dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+#cards section p {
+  margin: 0.25rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+#cards section img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 340 / 440; /* Mantiene la reserva de espacio de la imagen previendo el desplazamiento */
+  background-color: var(--color1);
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(29, 45, 68, 0.12);
+  border: 1px solid var(--color3);
 }
 
 /* ==========================================================================
