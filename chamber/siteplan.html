@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber of Commerce Site Plan</title>
+  <meta name="description" content="Site Plan for the Chamber of Commerce project - WDD 231.">
+  <meta name="author" content="Erick Leonardo Scala García">
+
+  <!-- Hojas de estilo vinculadas -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
+  <link rel="stylesheet" href="styles/small.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1>Chamber of Commerce Site Plan</h1>
+      <span class="theme-toggle" aria-label="Toggle theme">◐</span>
+    </div>
+    <p>WDD 231 Web Frontend Development I</p>
+  </header>
+
+  <main>
+  <section>
+    <h2>Site Name</h2>
+    <p><strong>Ureña Chamber of Commerce</strong></p>
+  </section>
+
+  <section>
+    <h2>Site Purpose</h2>
+    <p>This website serves as a strategic business hub for companies and entrepreneurs in Ureña. It aims to foster local economic growth, highlight cross-border commerce opportunities, support industrial and commercial sectors through an interactive business directory, and showcase community events and networking programs.</p>
+  </section>
+
+  <section>
+    <h2>Target Market</h2>
+    <p>Local business owners, industrial entrepreneurs, commercial managers, and visitors interested in trade within Ureña and surrounding border regions.</p>
+  </section>
+
+  <section>
+    <h2>Site Goals</h2>
+    <ul>
+      <li>Improve member engagement by providing valuable business resources, networking events, and trade directory listings.</li>
+      <li>Attract new commercial enterprises and promote sustainable economic growth in the Ureña region.</li>
+      <li>Enhance the visibility and reputation of the Ureña Chamber of Commerce as a trusted leader in local commerce.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>User Personas</h2>
+    <ul>
+      <li><strong>Small Business Owner (Maria)</strong>: Maria is a 35-year-old owner of a textile shop in Ureña. She seeks networking opportunities, marketing support, and commercial visibility to scale her business.</li>
+      <li><strong>Corporate Executive (Diego)</strong>: Diego is a 47-year-old logistics executive. He looks for strategic partnerships, regional trade insights, and contacts with key business leaders in Ureña.</li>
+      <li><strong>The New Resident / Visitor (Francisco)</strong>: Francisco recently moved to Ureña and wants to explore local commercial services, business directories, and upcoming community workshops.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Scenarios</h2>
+    <ul>
+      <li>A local shop owner wants to join the Ureña Chamber of Commerce to connect with suppliers. They visit the website to check membership tiers and apply online.</li>
+      <li>A community member searches for upcoming regional business seminars. They browse the events calendar to register.</li>
+      <li>An investor exploring opportunities in Ureña visits the site to review the business directory and local commercial background.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>SEO Plan</h2>
+    <ul>
+      <li>Incorporate targeted keywords such as "Ureña trade", "Ureña businesses", and "Ureña Chamber of Commerce" in titles and page descriptions.</li>
+      <li>Claim and verify the Chamber's profile on Google Business Profile.</li>
+      <li>Establish backlinks with registered member business websites in Ureña to strengthen search authority.</li>
+      <li>Embed Google Analytics across all pages to track visitor behavior and optimize site traffic.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Design Brief</h2>
+    <h3>Color Palette</h3>
+    <div class="color-palette">
+      <div class="color-box" style="background-color: #003366;">Primary: #003366</div>
+      <div class="color-box" style="background-color: #0055a5;">Secondary: #0055a5</div>
+      <div class="color-box" style="background-color: #f4a261; color: #000;">Accent: #f4a261</div>
+      <div class="color-box" style="background-color: #f9f9f9; color: #000; border: 1px solid #ccc;">Background: #f9f9f9</div>
+    </div>
+
+    <h3>Typography</h3>
+    <p><strong>Primary Font:</strong> Roboto / Arial (Clean, highly readable sans-serif font ideal for business and responsive web design).</p>
+  </section>
+
+  <section>
+    <h2>Site Map</h2>
+    <ul class="sitemap-list">
+      <li>Home</li>
+      <li>Discover</li>
+      <li>Business Directory</li>
+      <li>Join</li>
+      <li class="draft">About</li>
+      <li class="draft">Podcast</li>
+      <li class="draft">Events</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Wireframes</h2>
+    <h3>Desktop Layout</h3>
+    <figure>
+      <img src="images/chamber-home-desktop-wireframe.webp" alt="Desktop Wireframe Layout" class="wireframe-img">
+      <figcaption>Multi-column desktop grid view layout with dark mode toggle and footer links.</figcaption>
+    </figure>
+
+    <h3>Mobile Layout</h3>
+    <figure>
+      <img src="images/chamber-home-mobile-wireframe.webp" alt="Mobile Wireframe Layout" class="wireframe-img">
+      <figcaption>Single-column responsive layout with hamburger menu navigation.</figcaption>
+    </figure>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Erick Leonardo Scala García | WDD 231 Site Plan</p>
+  </footer>
+
+  <script>
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
