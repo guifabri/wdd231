@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Vanguard Consulting Group",
+    "address": "123 Main St, Cityville, ST 12345",
+    "phone": "(123) 456-7890",
+    "website": "www.vanguardconsulting.com",
+    "image": "vanguard.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Apex Tech Solutions",
+    "address": "456 Innovation Way, Techtown, ST 12346",
+    "phone": "(123) 555-0192",
+    "website": "www.apextechsolutions.com",
+    "image": "apextech.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Green Leaf Cafe",
+    "address": "789 Oak Avenue, Cityville, ST 12345",
+    "phone": "(123) 555-0143",
+    "website": "www.greenleafcafe.com",
+    "image": "greenleaf.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Summit Financial Group",
+    "address": "101 Commerce Blvd, Suite 200, Metroville, ST 12347",
+    "phone": "(123) 555-0188",
+    "website": "www.summitfinancial.com",
+    "image": "summitfinancial.jpg",
+    "membership": "Gold"
+  },
+  {
+    "name": "Harbor Auto Repair",
+    "address": "321 Industrial Rd, Portside, ST 12348",
+    "phone": "(123) 555-0165",
+    "website": "www.harborautorepair.com",
+    "image": "harborauto.jpg",
+    "membership": "Member"
+  },
+  {
+    "name": "Horizon Digital Marketing",
+    "address": "654 Creative Loop, Techtown, ST 12346",
+    "phone": "(123) 555-0112",
+    "website": "www.horizondigital.com",
+    "image": "horizondigital.jpg",
+    "membership": "Silver"
+  },
+  {
+    "name": "Pinnacle Legal Services",
+    "address": "987 Court Street, Cityville, ST 12345",
+    "phone": "(123) 555-0177",
+    "website": "www.pinnaclelegalservices.com",
+    "image": "pinnaclelegal.jpg",
+    "membership": "Member"
+  }
+]
