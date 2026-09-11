@@ -1,19 +1,147 @@
 /* ===================================================
-   DESKTOP HEADER OVERRIDES (larger.css)
+   SITE PLAN - DESKTOP STYLES (larger.css)
+   Course: WDD 231 - Web Frontend Development I
+   Student: Erick Scala
    =================================================== */
 
-@media (min-width: 640px) {
-  /* Keep header content centered on desktop screens */
+@media screen and (min-width: 768px) {
+  /* Desktop Header Layout: Centered Flex Container */
   header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 3rem;
+    text-align: center;
+    padding: 2rem 4rem;
   }
 
-  /* Place logo and text side-by-side while maintaining central alignment */
+  /* Centered Horizontal Brand Layout on Desktop */
   .brand {
     flex-direction: row;
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .brand h1 {
+    font-size: 2.2rem;
+  }
+
+  /* Centered Navigation Menu */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  nav a {
+    font-size: 1.15rem;
+    padding: 0.65rem 1.3rem;
+  }
+
+  /* Main Container Layout for Desktop */
+  main {
+    padding: 2.5rem 2rem;
+  }
+
+  main h1 {
+    font-size: 2.8rem;
+  }
+
+  /* Color Palette Grid: 3 side-by-side swatches */
+  .color-palette {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* Wireframe Layout Grid (2 Columns: Mobile vs Desktop Previews) */
+  .wireframes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ===================================================
+   MEMBER DIRECTORY - DESKTOP OVERRIDES (larger.css)
+   Course: WDD 231 - Web Frontend Development I
+   Student: Erick Scala
+   =================================================== */
+
+@media screen and (min-width: 768px) {
+  /* Header Desktop Layout: Logo/Name Left, Navbar Right */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 1.75rem 3.5rem;
+  }
+
+  /* Brand Container Left-Aligned with Scaled Font & Logo */
+  .brand {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+
+  .brand img {
+    width: 90px;
+  }
+
+  .brand h1 {
+    font-size: 2.4rem;
+  }
+
+  /* Navbar Right-Aligned with Larger Links */
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Main Desktop Content Spacing */
+  main {
+    padding: 3rem 2.5rem;
+  }
+
+  main h1 {
+    font-size: 3rem;
+  }
+
+  /* 2-Column Responsive Grid on Medium Desktop */
+  #members.grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  /* List View Desktop Layout */
+  #members.list .member-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #members.list .card-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  #members.list .card-info p {
+    margin: 0;
+  }
+}
+
+/* 3-Column Responsive Grid on Wide Screens */
+@media screen and (min-width: 1100px) {
+  #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
   }
 }

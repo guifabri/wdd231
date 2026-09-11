@@ -1,16 +1,23 @@
 /* ===================================================
    SITE PLAN - BASE & MOBILE STYLES (small.css)
+   Course: WDD 231 - Web Frontend Development I
+   Student: Erick Scala
    =================================================== */
 
 :root {
-  --primary-color: #03045E;   /* Dark Navy */
+  /* Official Ureña Chamber Color Palette */
+  --primary-color: #03045E;   /* Navy Dark */
   --secondary-color: #023E8A; /* Royal Blue */
-  --accent-color: #0096C7;    /* Cerulean Accent */
-  --light-bg: #F4F6F9;        /* Light Gray/Blue Tint */
-  --card-bg: #FFFFFF;         /* Clean White */
-  --text-dark: #1D2A44;       /* High-Contrast Body Text */
+  --accent-color: #0096C7;    /* Cyan Accent */
+  --light-bg: #F8F9FA;        /* Off-White Background */
+  --card-bg: #FFFFFF;         /* Pure White Card */
+  --text-dark: #1D2A44;       /* High-contrast body text */
+  --text-muted: #555555;     /* Subdued text */
+  --border-color: #E0E0E0;   /* Light Gray Border */
   --font-main: 'Roboto', Arial, sans-serif;
   --font-heading: 'Montserrat', sans-serif;
+  --border-radius: 6px;
+  --transition: all 0.25s ease-in-out;
 }
 
 * {
@@ -24,13 +31,14 @@ body {
   background-color: var(--light-bg);
   color: var(--text-dark);
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===================================================
-   HEADER & BRANDING STYLES (small.css)
+   1. HEADER & BRANDING STYLES (Centered)
    =================================================== */
-
-/* Header Container */
 header {
   background-color: var(--card-bg);
   padding: 1.25rem 1.5rem;
@@ -44,98 +52,50 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Centered Brand Identity (Logo + Chamber Name) */
 .brand {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 0.5rem;
+  text-decoration: none;
 }
 
 .brand img {
-  width: 60px;
+  width: 75px;
   height: auto;
 }
 
-.brand span {
+.brand h1 {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--primary-color);
-  letter-spacing: -0.5px;
-  text-align: center;
+  line-height: 1.2;
 }
 
-/* Centered Navigation Links */
+/* Navigation Menu (Centered) */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
   padding: 0;
   margin: 0;
 }
 
-.brand {
-  display: flex;
-  flex-direction: column; /* O "row" si prefieres el logo al lado del texto pero centrado */
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.brand img {
-  width: 60px;
-  height: auto;
-}
-
-.brand span {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  letter-spacing: -0.5px;
-  text-align: center;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.brand img {
-  width: 50px;
-  height: auto;
-}
-
-.brand span {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--primary-color);
-  letter-spacing: -0.5px;
-}
-
-/* Nav Menu */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav a {
+nav a,
+nav a:visited {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 700;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.95rem;
-  transition: all 0.25s ease;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
 
 nav a:hover,
@@ -144,57 +104,45 @@ nav a.active {
   color: #ffffff;
 }
 
-/* --- MAIN CONTAINER --- */
+/* ===================================================
+   2. MAIN SITE PLAN CONTENT
+   =================================================== */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
 main h1 {
   font-family: var(--font-heading);
-  text-align: center;
-  color: var(--primary-color);
   font-size: 2.2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
   font-weight: 800;
-  margin-bottom: 2rem;
 }
 
-/* --- SITE PLAN SECTIONS (Cards) --- */
-.site-plan-card {
+section {
   background-color: var(--card-bg);
-  padding: 1.75rem;
-  margin-bottom: 1.75rem;
-  border-radius: 8px;
-  border-left: 6px solid var(--secondary-color);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--accent-color);
 }
 
-.site-plan-card h2 {
+section h2 {
   font-family: var(--font-heading);
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1.5rem;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
-  border-bottom: 2px solid var(--light-bg);
-  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
 }
 
-.site-plan-card p, 
-.site-plan-card ul {
-  font-size: 1rem;
-  color: var(--text-dark);
-}
-
-.site-plan-card ul {
-  padding-left: 1.25rem;
-  margin-top: 0.5rem;
-}
-
-.site-plan-card li {
-  margin-bottom: 0.4rem;
-}
-
-/* --- COLOR PALETTE SWATCHES --- */
+/* Color Swatches (Mobile: 1 Column) */
 .color-palette {
   display: grid;
   grid-template-columns: 1fr;
@@ -202,35 +150,329 @@ main h1 {
   margin-top: 1rem;
 }
 
-.color-box {
-  padding: 1.25rem;
-  border-radius: 6px;
+.color-swatch {
+  padding: 1rem;
+  border-radius: var(--border-radius);
   color: #ffffff;
   font-weight: 700;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.color-box span {
-  display: block;
-  font-weight: 400;
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
+/* Wireframe Previews (Mobile: 1 Column) */
+.wireframes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-/* Hex Colors matching your official palette */
-.bg-navy { background-color: #03045E; }
-.bg-royal { background-color: #023E8A; }
-.bg-cyan { background-color: #0096C7; color: #ffffff; }
+.wireframe-card {
+  text-align: center;
+}
 
-/* --- FOOTER --- */
+.wireframe-card img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  margin-top: 0.5rem;
+}
+
+/* ===================================================
+   3. FOOTER STYLES
+   =================================================== */
 footer {
   background-color: var(--primary-color);
   color: #ffffff;
   text-align: center;
   padding: 1.5rem;
-  margin-top: 3rem;
+  margin-top: auto;
   font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* ===================================================
+   MEMBER DIRECTORY - BASE & MOBILE STYLES (small.css)
+   Course: WDD 231 - Web Frontend Development I
+   Student: Erick Scala
+   =================================================== */
+
+:root {
+  /* Official Ureña Chamber Color Palette */
+  --primary-color: #03045E;   /* Navy Dark */
+  --secondary-color: #023E8A; /* Royal Blue */
+  --accent-color: #0096C7;    /* Cyan Accent */
+  --light-bg: #F8F9FA;        /* Off-White Background */
+  --card-bg: #FFFFFF;         /* Pure White Card */
+  --text-dark: #1D2A44;       /* High-contrast readable text */
+  --text-muted: #555555;     /* Subdued text */
+  --border-color: #E0E0E0;   /* Light Gray Border */
+  --font-main: 'Roboto', Arial, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --border-radius: 8px;
+  --transition: all 0.25s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===================================================
+   1. HEADER & BRANDING STYLES (Mobile: Centered)
+   =================================================== */
+header {
+  background-color: var(--card-bg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.25rem;
+  border-bottom: 4px solid var(--accent-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 80px;
+  height: auto;
+}
+
+.brand h1 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1.2;
+}
+
+/* Mobile Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a,
+nav a:visited {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+/* ===================================================
+   2. DIRECTORY MAIN & TOGGLE CONTROLS
+   =================================================== */
+main {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+main h1 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+}
+
+/* View Toggle Controls */
+.views {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.views button {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.85rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.views button.active,
+.views button:hover {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================================
+   3. MEMBER CARDS - GRID VIEW
+   =================================================== */
+#members.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+#members.grid .member-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--accent-color);
+  display: flex;
+  flex-direction: column;
+}
+
+#members.grid .member-card h3 {
+  font-family: var(--font-heading);
+  margin: 0;
+  text-align: center;
+  font-size: 1.35rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+#members.grid .member-card .tagline {
+  margin: 0.25rem 0 0.5rem 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+#members.grid .member-card hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Inner Layout: Logo left, details right */
+#members.grid .card-body {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+#members.grid .logo-box {
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+}
+
+#members.grid .logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#members.grid .card-info {
+  flex: 1;
+  font-size: 0.95rem;
+  text-align: left;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+#members.grid .card-info p {
+  margin: 0.35rem 0;
+  word-break: break-word;
+}
+
+#members.grid .card-info a {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ===================================================
+   4. MEMBER CARDS - LIST VIEW
+   =================================================== */
+#members.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#members.list .member-card {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 1rem 1.25rem;
+}
+
+#members.list .tagline,
+#members.list hr,
+#members.list .logo-box {
+  display: none;
+}
+
+#members.list .card-body {
+  display: block;
+}
+
+/* ===================================================
+   5. FOOTER STYLES
+   =================================================== */
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  font-size: 0.95rem;
 }
 
 footer p {
