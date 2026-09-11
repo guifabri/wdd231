@@ -1,4 +1,4 @@
-// --- 1. Fechas y Footer ---
+// --- 1. Dates and Footer ---
 const currentYearSpan = document.querySelector("#currentyear");
 if (currentYearSpan) {
   currentYearSpan.textContent = new Date().getFullYear();
@@ -9,7 +9,7 @@ if (lastModifiedParagraph) {
   lastModifiedParagraph.textContent = `Last Modification: ${document.lastModified}`;
 }
 
-// --- 2. Menú de Navegación Móvil ---
+// --- 2. Mobile Navigation Menu ---
 const mainNav = document.querySelector(".navigation");
 const hamburgerBtn = document.querySelector("#menu");
 
@@ -20,7 +20,7 @@ if (hamburgerBtn && mainNav) {
   });
 }
 
-// --- 3. Cargar Datos del JSON con Fetch y Async/Await ---
+// --- 3. Fetch JSON Data ---
 const url = "data/members.json";
 const membersContainer = document.querySelector("#members");
 
@@ -31,64 +31,44 @@ async function getMembersData() {
       const data = await response.json();
       displayMembers(data);
     } else {
-      console.error("Error al cargar los miembros:", response.statusText);
+      console.error("Failed to load members:", response.statusText);
     }
   } catch (error) {
-    console.error("Error en la solicitud fetch:", error);
+    console.error("Error fetching data:", error);
   }
 }
 
-// --- 4. Renderizar las Tarjetas de Miembros ---
+// --- 4. Render Member Cards (Wireframe Layout) ---
 const displayMembers = (members) => {
-  membersContainer.innerHTML = ""; // Limpiar contenido previo
+  membersContainer.innerHTML = "";
 
   members.forEach((member) => {
-    // Crear elementos HTML para cada tarjeta
     const card = document.createElement("section");
     card.classList.add("member-card");
 
-    const img = document.createElement("img");
-    img.setAttribute("src", member.image);
-    img.setAttribute("alt", `Logo of ${member.name}`);
-    img.setAttribute("loading", "lazy");
-    img.setAttribute("width", "100");
-    img.setAttribute("height", "100");
+    card.innerHTML = `
+      <h3>${member.name}</h3>
+      <p class="tagline">${member.membership} Member</p>
+      <hr>
+      <div class="card-body">
+        <div class="logo-box">
+          <img src="${member.image}" alt="Logo of ${member.name}" loading="lazy">
+        </div>
+        <div class="card-info">
+          <p><strong>ADDRESS:</strong> ${member.address}</p>
+          <p><strong>PHONE:</strong> ${member.phone}</p>
+          <p><strong>URL:</strong> <a href="https://${member.website.replace(/^https?:\/\//, '')}" target="_blank" rel="noopener">${member.website}</a></p>
+        </div>
+      </div>
+    `;
 
-    const name = document.createElement("h3");
-    name.textContent = member.name;
-
-    const address = document.createElement("p");
-    address.textContent = member.address;
-
-    const phone = document.createElement("p");
-    phone.textContent = member.phone;
-
-    const website = document.createElement("a");
-    website.setAttribute("href", member.website);
-    website.setAttribute("target", "_blank");
-    website.setAttribute("rel", "noopener");
-    website.textContent = member.website;
-
-    const membership = document.createElement("p");
-    membership.classList.add("membership-level");
-    membership.textContent = `Membership: ${member.membership}`;
-
-    // Agregar elementos a la tarjeta
-    card.appendChild(img);
-    card.appendChild(name);
-    card.appendChild(address);
-    card.appendChild(phone);
-    card.appendChild(website);
-    card.appendChild(membership);
-
-    // Agregar tarjeta al contenedor principal
     membersContainer.appendChild(card);
   });
 };
 
 getMembersData();
 
-// --- 5. Alternar Vistas (Grid / List) ---
+// --- 5. View Switcher (Grid / List) ---
 const gridBtn = document.querySelector("#grid");
 const listBtn = document.querySelector("#list");
 
@@ -96,10 +76,14 @@ if (gridBtn && listBtn && membersContainer) {
   gridBtn.addEventListener("click", () => {
     membersContainer.classList.add("grid");
     membersContainer.classList.remove("list");
+    gridBtn.classList.add("active");
+    listBtn.classList.remove("active");
   });
 
   listBtn.addEventListener("click", () => {
     membersContainer.classList.add("list");
     membersContainer.classList.remove("grid");
+    listBtn.classList.add("active");
+    gridBtn.classList.remove("active");
   });
 }

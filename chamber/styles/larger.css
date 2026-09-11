@@ -1,0 +1,19 @@
+/* ===================================================
+   DESKTOP HEADER OVERRIDES (larger.css)
+   =================================================== */
+
+@media (min-width: 640px) {
+  /* Keep header content centered on desktop screens */
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 3rem;
+  }
+
+  /* Place logo and text side-by-side while maintaining central alignment */
+  .brand {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

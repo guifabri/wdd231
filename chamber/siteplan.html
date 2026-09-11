@@ -8,9 +8,10 @@
   <meta name="author" content="Erick Leonardo Scala García">
 
   <!-- Hojas de estilo vinculadas -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
-  <link rel="stylesheet" href="styles/small.css">
+  <!-- Hojas de estilo vinculadas -->
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 </head>
 <body>
 
@@ -79,10 +80,12 @@
     <h2>Design Brief</h2>
     <h3>Color Palette</h3>
     <div class="color-palette">
-      <div class="color-box" style="background-color: #003366;">Primary: #003366</div>
-      <div class="color-box" style="background-color: #0055a5;">Secondary: #0055a5</div>
-      <div class="color-box" style="background-color: #f4a261; color: #000;">Accent: #f4a261</div>
-      <div class="color-box" style="background-color: #f9f9f9; color: #000; border: 1px solid #ccc;">Background: #f9f9f9</div>
+      <div class="color-box" style="background-color: #03045E; color: #ffffff;">Dark Navy: #03045E</div>
+      <div class="color-box" style="background-color: #023E8A; color: #ffffff;">Primary: #023E8A</div>
+      <div class="color-box" style="background-color: #0077B6; color: #ffffff;">Secondary: #0077B6</div>
+      <div class="color-box" style="background-color: #0096C7; color: #ffffff;">Accent 1: #0096C7</div>
+      <div class="color-box" style="background-color: #00B4D8; color: #000000;">Accent 2: #00B4D8</div>
+      <div class="color-box" style="background-color: #ECF6F8; color: #03045E; border: 1px solid #ccc;">Background: #ECF6F8</div>
     </div>
 
     <h3>Typography</h3>
@@ -104,19 +107,25 @@
 
   <section>
     <h2>Wireframes</h2>
+    
     <h3>Desktop Layout</h3>
     <figure>
-      <img src="images/chamber-home-desktop-wireframe.webp" alt="Desktop Wireframe Layout" class="wireframe-img">
+      <picture>
+        <source srcset="images/wireframe-desktop.webp" type="image/webp">
+        <img src="images/wireframe-desktop.webp" alt="Desktop Wireframe Layout" class="wireframe-img">
+      </picture>
       <figcaption>Multi-column desktop grid view layout with dark mode toggle and footer links.</figcaption>
     </figure>
 
     <h3>Mobile Layout</h3>
     <figure>
-      <img src="images/chamber-home-mobile-wireframe.webp" alt="Mobile Wireframe Layout" class="wireframe-img">
+      <picture>
+        <source srcset="images/wireframe-responsive.webp" type="image/webp">
+        <img src="images/wireframe-responsive.webp" alt="Mobile Wireframe Layout" class="wireframe-img">
+      </picture>
       <figcaption>Single-column responsive layout with hamburger menu navigation.</figcaption>
     </figure>
   </section>
-</main>
 
   <footer>
     <p>&copy; <span id="year"></span> | Erick Leonardo Scala García | WDD 231 Site Plan</p>
