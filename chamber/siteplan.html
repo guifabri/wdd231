@@ -4,24 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chamber of Commerce Site Plan</title>
-  <meta name="description" content="Site Plan for the Chamber of Commerce project - WDD 231.">
-  <meta name="author" content="Erick Leonardo Scala García">
-
-  <!-- Hojas de estilo vinculadas -->
-  <!-- Hojas de estilo vinculadas -->
-<link rel="stylesheet" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/small.css">
-<link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
+  
+  <!-- Hojas de estilo CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
 </head>
 <body>
 
-  <header>
-    <div class="header-container">
-      <h1>Chamber of Commerce Site Plan</h1>
-      <span class="theme-toggle" aria-label="Toggle theme">◐</span>
-    </div>
-    <p>WDD 231 Web Frontend Development I</p>
-  </header>
+<header>
+  <h1>Chamber of Commerce Site Plan</h1>
+  <p class="course-subtitle">WDD 231 Web Frontend Development I</p>
+  <button id="theme-btn" aria-label="Toggle Theme">◐</button>
+</header>
 
   <main>
   <section>
@@ -76,21 +70,26 @@
     </ul>
   </section>
 
-  <section>
-    <h2>Design Brief</h2>
-    <h3>Color Palette</h3>
-    <div class="color-palette">
-      <div class="color-box" style="background-color: #03045E; color: #ffffff;">Dark Navy: #03045E</div>
-      <div class="color-box" style="background-color: #023E8A; color: #ffffff;">Primary: #023E8A</div>
-      <div class="color-box" style="background-color: #0077B6; color: #ffffff;">Secondary: #0077B6</div>
-      <div class="color-box" style="background-color: #0096C7; color: #ffffff;">Accent 1: #0096C7</div>
-      <div class="color-box" style="background-color: #00B4D8; color: #000000;">Accent 2: #00B4D8</div>
-      <div class="color-box" style="background-color: #ECF6F8; color: #03045E; border: 1px solid #ccc;">Background: #ECF6F8</div>
-    </div>
+  <!-- Sample Design Brief section showing side-by-side color swatches -->
+    <section class="design-brief">
+      <h2>Design Brief</h2>
+      
+      <h3>Color Palette</h3>
+      <div class="color-palette">
+        <div class="swatch dark-navy">Dark Navy<br>#03045E</div>
+        <div class="swatch primary">Primary<br>#023E8A</div>
+        <div class="swatch secondary">Secondary<br>#0077B6</div>
+        <div class="swatch accent-1">Accent 1<br>#0096C7</div>
+        <div class="swatch accent-2">Accent 2<br>#00B4D8</div>
+        <div class="swatch background">Background<br>#ECF6F8</div>
+      </div>
 
-    <h3>Typography</h3>
-    <p><strong>Primary Font:</strong> Roboto / Arial (Clean, highly readable sans-serif font ideal for business and responsive web design).</p>
-  </section>
+      <div class="typography">
+        <h3>Typography</h3>
+        <p><strong>Primary Font:</strong> Roboto / Arial (Clean, highly readable sans-serif font ideal for business and responsive web design).</p>
+      </div>
+    </section>
+  </main>
 
   <section>
     <h2>Site Map</h2>

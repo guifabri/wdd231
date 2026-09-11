@@ -1,61 +1,54 @@
 /* ===================================================
-   SITE PLAN - DESKTOP STYLES (larger.css)
-   Course: WDD 231 - Web Frontend Development I
-   Student: Erick Scala
+   CHAMBER SITE PLAN - DESKTOP OVERRIDES (larger.css)
    =================================================== */
 
 @media screen and (min-width: 768px) {
-  /* Desktop Header Layout: Centered Flex Container */
+  /* Maintain strictly centered layout for Header on Desktop */
   header {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding: 2rem 4rem;
-  }
-
-  /* Centered Horizontal Brand Layout on Desktop */
-  .brand {
-    flex-direction: row;
     justify-content: center;
+    text-align: center;
+    padding: 2.5rem 2rem;
     gap: 1rem;
   }
 
-  .brand h1 {
-    font-size: 2.2rem;
+  header h1 {
+    font-size: 2.6rem;
   }
 
-  /* Centered Navigation Menu */
-  nav ul {
+  header .course-subtitle {
+    font-size: 1.25rem;
+  }
+
+  /* Expand color palette seamlessly across desktop grid */
+  .color-palette {
+    gap: 1rem;
+  }
+
+  .swatch {
+    flex: 1;               /* Fits all colors side-by-side in a single row */
+    min-height: 90px;
+    font-size: 0.9rem;
+  }
+
+  /* Center wireframes side-by-side or scaled properly on Desktop */
+  .wireframes-container {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.25rem;
-  }
-
-  nav a {
-    font-size: 1.15rem;
-    padding: 0.65rem 1.3rem;
-  }
-
-  /* Main Container Layout for Desktop */
-  main {
-    padding: 2.5rem 2rem;
-  }
-
-  main h1 {
-    font-size: 2.8rem;
-  }
-
-  /* Color Palette Grid: 3 side-by-side swatches */
-  .color-palette {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  /* Wireframe Layout Grid (2 Columns: Mobile vs Desktop Previews) */
-  .wireframes-grid {
-    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
     gap: 2rem;
+    margin: 2rem auto;
+  }
+
+  .wireframes-container img {
+    max-width: 700px;       /* Constrain maximum width on wide displays */
+    width: 100%;
+  }
+
+  main {
+    padding: 3rem 2rem;
   }
 }
 
