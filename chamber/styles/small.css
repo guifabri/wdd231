@@ -530,6 +530,7 @@ main.home-main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: var(--dark-navy);
 }
 
 .hero img {
