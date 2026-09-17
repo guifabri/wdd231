@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenWeatherMap.org API Test | Trier, Germany</title>
+  <meta name="description" content="WDD 231 weather activity: current temperature in Trier, Germany using the OpenWeatherMap API.">
+  <meta name="author" content="Erick Scala">
+
+  <link rel="icon" href="favicon.ico">
+
+  <meta property="og:title" content="OpenWeatherMap API Test - Trier, Germany">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://guifabri.github.io/wdd231/weather.html">
+  <meta property="og:description" content="Current weather in Trier, Germany fetched live from OpenWeatherMap.">
+
+  <!-- Reuse chamber CSS (per request) -->
+  <link rel="stylesheet" href="chamber/styles/normalize.css">
+  <link rel="stylesheet" href="chamber/styles/small.css">
+  <link rel="stylesheet" href="chamber/styles/larger.css" media="(min-width: 640px)">
+
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <img src="chamber/images/logo.svg" alt="Ureña Chamber of Commerce Logo">
+      <span>Ureña Chamber of Commerce</span>
+    </div>
+    <nav class="navigation" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chamber/directory.html">Directory</a></li>
+        <li><a href="weather.html" class="active" aria-current="page">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>OpenWeatherMap.org API Test</h1>
+
+    <section class="weather-card">
+      <h2>Trier, Germany</h2>
+      <p>The current temperature in Trier, Germany is <span id="current-temp"></span></p>
+      <figure>
+        <img id="weather-icon" src="" alt="">
+        <figcaption></figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>123 Main Street, Cityville</p>
+      <p>info@chamber.org | (123) 456-7890</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> Erick Scala | OpenWeatherMap.org | CC BY-SA 4.0</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>
