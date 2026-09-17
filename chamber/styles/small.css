@@ -3,20 +3,25 @@
    =================================================== */
 
 :root {
-  /* Color Palette variables */
+  /* Unified Chamber Color Palette (site-plan wins) + directory additions */
   --dark-navy: #03045E;
   --primary-color: #023E8A;
   --secondary-color: #0077B6;
   --accent-1: #0096C7;
   --accent-2: #00B4D8;
+  --accent-color: #0096C7;
   --bg-color: #ECF6F8;
+  --light-bg: #F8F9FA;
   --card-bg: #FFFFFF;
   --text-dark: #1D2A44;
+  --text-muted: #555555;
   --border-color: #D1E3E8;
 
   /* Typography */
   --font-main: 'Roboto', Arial, sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
   --border-radius: 8px;
+  --transition: all 0.25s ease-in-out;
 }
 
 * {
@@ -35,21 +40,7 @@ body {
   flex-direction: column;
 }
 
-/* 1. STACKED AND CENTERED HEADER */
-header {
-  width: 100%;
-  background-color: var(--card-bg);
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column; /* Force vertical stacking order */
-  align-items: center;     /* Center elements horizontally */
-  justify-content: center; /* Center elements vertically */
-  text-align: center;      /* Center text content */
-  gap: 0.75rem;            /* Uniform spacing between elements */
-  border-bottom: 4px solid var(--accent-1);
-  box-shadow: 0 2px 8px rgba(3, 4, 94, 0.08);
-}
-
+/* 1. SITE-PLAN HEADER EXTRAS (base header defined once below) */
 header h1 {
   font-family: var(--font-main);
   font-size: 1.8rem;
@@ -72,15 +63,7 @@ header #theme-btn {
   cursor: pointer;
 }
 
-/* 2. MAIN CONTENT & SECTIONS */
-main {
-  flex: 1;
-  max-width: 1100px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
-}
-
+/* 2. SHARED MAIN (defined once in directory section) + SECTIONS */
 section {
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
@@ -197,44 +180,14 @@ footer {
    MEMBER DIRECTORY - BASE & MOBILE STYLES (small.css)
    Course: WDD 231 - Web Frontend Development I
    Student: Erick Scala
+   Shared base above; page-specific styles below.
    =================================================== */
-
-:root {
-  /* Official Ureña Chamber Color Palette */
-  --primary-color: #03045E;   /* Navy Dark */
-  --secondary-color: #023E8A; /* Royal Blue */
-  --accent-color: #0096C7;    /* Cyan Accent */
-  --light-bg: #F8F9FA;        /* Off-White Background */
-  --card-bg: #FFFFFF;         /* Pure White Card */
-  --text-dark: #1D2A44;       /* High-contrast readable text */
-  --text-muted: #555555;     /* Subdued text */
-  --border-color: #E0E0E0;   /* Light Gray Border */
-  --font-main: 'Roboto', Arial, sans-serif;
-  --font-heading: 'Montserrat', sans-serif;
-  --border-radius: 8px;
-  --transition: all 0.25s ease-in-out;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: var(--font-main);
-  background-color: var(--light-bg);
-  color: var(--text-dark);
-  line-height: 1.6;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 
 /* ===================================================
    1. HEADER & BRANDING STYLES (Mobile: Compact)
    =================================================== */
 header {
+  width: 100%;
   background-color: var(--card-bg);
   padding: 0.6rem 1rem;
   display: flex;
@@ -243,8 +196,8 @@ header {
   justify-content: center;
   text-align: center;
   gap: 0.45rem;
-  border-bottom: 3px solid var(--accent-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-bottom: 3px solid var(--accent-1);
+  box-shadow: 0 2px 8px rgba(3, 4, 94, 0.08);
 }
 
 .brand {
@@ -461,18 +414,7 @@ main h1 {
   display: block;
 }
 
-/* ===================================================
-   5. FOOTER STYLES
-   =================================================== */
-footer {
-  background-color: var(--primary-color);
-  color: #ffffff;
-  text-align: center;
-  padding: 1.5rem;
-  margin-top: auto;
-  font-size: 0.95rem;
-}
-
+/* Footer base defined once above; extras below */
 footer p {
   margin: 0.25rem 0;
 }
