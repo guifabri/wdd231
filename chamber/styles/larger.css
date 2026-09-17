@@ -68,6 +68,26 @@
     padding: 0.65rem 2.5rem;
   }
 
+  .header-top {
+    width: auto;
+    flex: 1;
+  }
+
+  /* Hide hamburger on desktop, always show nav */
+  #menuButton {
+    display: none;
+  }
+
+  .navigation {
+    width: auto;
+  }
+
+  .navigation ul,
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+  }
+
   /* Brand Container Left-Aligned with Scaled Font & Logo */
   .brand {
     flex-direction: row;

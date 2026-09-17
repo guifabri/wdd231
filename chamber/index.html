@@ -26,17 +26,21 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css" media="(min-width: 640px)">
 
+  <script src="scripts/navigation.js" defer></script>
   <script src="scripts/home.js" defer></script>
 </head>
 <body>
 
   <header>
-  <div class="brand">
-    <img src="images/logo.svg" alt="Ureña Chamber of Commerce Logo">
-    <span>Ureña Chamber of Commerce</span>
+  <div class="header-top">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Ureña Chamber of Commerce Logo">
+      <span>Ureña Chamber of Commerce</span>
+    </div>
+    <button id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
   </div>
-  <nav class="navigation">
-    <ul>
+  <nav class="navigation" aria-label="Primary Navigation">
+    <ul id="primaryNav">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html">Directory</a></li>

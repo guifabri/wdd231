@@ -10,15 +10,7 @@ if (lastModifiedParagraph) {
 }
 
 // --- 2. Mobile Navigation Menu ---
-const mainNav = document.querySelector(".navigation");
-const hamburgerBtn = document.querySelector("#menu");
-
-if (hamburgerBtn && mainNav) {
-  hamburgerBtn.addEventListener("click", () => {
-    mainNav.classList.toggle("open");
-    hamburgerBtn.classList.toggle("open");
-  });
-}
+// Handled by scripts/navigation.js (#menuButton + .navigation).
 
 // --- 3. Fetch JSON Data ---
 const url = "data/members.json";
