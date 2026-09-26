@@ -787,3 +787,249 @@ main.home-main {
   padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
+
+/* ===================================================
+   8. JOIN PAGE: FORM + MEMBERSHIP CARDS + MODALS
+   =================================================== */
+.join-intro {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.join-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.join-form fieldset {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+}
+
+.join-form legend {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+}
+
+.join-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.65rem 0.75rem;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.join-form input:focus-visible,
+.join-form textarea:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 1px;
+  border-color: var(--secondary-color);
+}
+
+.join-form .radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+  cursor: pointer;
+}
+
+.join-form input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-color);
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.9rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.submit-btn:hover,
+.submit-btn:focus-visible {
+  background-color: var(--secondary-color);
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.membership-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.level-card {
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: cardEntrance 0.8s ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 220px;
+}
+
+.membership-cards .level-card:nth-child(1) { animation-delay: 0s; }
+.membership-cards .level-card:nth-child(2) { animation-delay: 0.15s; }
+.membership-cards .level-card:nth-child(3) { animation-delay: 0.3s; }
+.membership-cards .level-card:nth-child(4) { animation-delay: 0.45s; }
+
+.np-card { background-color: #0077B6; }
+.bronze-card { background-color: #B5651D; }
+.silver-card { background-color: #5D6D8E; }
+.gold-card { background-color: #D9A800; color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.level-card h3 {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.level-price {
+  color: #fff;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.level-card .more-info {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.level-card .more-info:hover,
+.level-card .more-info:focus-visible {
+  background-color: #fff;
+  color: var(--dark-navy);
+  text-shadow: none;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.more-info {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.55rem 1.4rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.more-info:hover,
+.more-info:focus-visible {
+  background-color: var(--primary-color);
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+dialog {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  max-width: 420px;
+  width: calc(100% - 2rem);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(3, 4, 94, 0.6);
+}
+
+dialog h3 {
+  font-family: var(--font-heading);
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+dialog ul {
+  text-align: left;
+  align-items: stretch;
+  margin: 1rem 0 1.5rem 1.25rem;
+}
+
+dialog ul li {
+  list-style: disc;
+  text-align: left;
+  margin-bottom: 0.4rem;
+}
+
+.close-modal {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 0.6rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Thank-you results card */
+.thankyou-card {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+#results p {
+  margin: 0.5rem 0;
+  font-size: 1.05rem;
+}

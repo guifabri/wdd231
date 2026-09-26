@@ -184,3 +184,29 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Join page desktop layout: form left, cards right */
+@media screen and (min-width: 768px) {
+  .join-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+
+  .membership-cards {
+    position: sticky;
+    top: 1rem;
+  }
+
+  .level-card {
+    padding: 2.25rem 1.75rem;
+    min-height: 250px;
+  }
+
+  .level-card h3 {
+    font-size: 1.65rem;
+  }
+
+  .level-price {
+    font-size: 1.25rem;
+  }
+}
