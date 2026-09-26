@@ -791,6 +791,12 @@ main.home-main {
 /* ===================================================
    8. JOIN PAGE: FORM + MEMBERSHIP CARDS + MODALS
    =================================================== */
+body.join-page {
+  background:
+    linear-gradient(rgba(236, 246, 248, 0.6), rgba(236, 246, 248, 0.6)),
+    url("../images/pedro-maria-urena.webp") center top / cover no-repeat;
+}
+
 .join-intro {
   text-align: center;
   color: var(--text-muted);
@@ -911,7 +917,7 @@ main.home-main {
 .membership-cards .level-card:nth-child(3) { animation-delay: 0.3s; }
 .membership-cards .level-card:nth-child(4) { animation-delay: 0.45s; }
 
-.np-card { background-color: #0077B6; }
+.np-card { background-color: #C7E7F5; color: #023E8A; }
 .bronze-card { background-color: #B5651D; }
 .silver-card { background-color: #5D6D8E; }
 .gold-card { background-color: #D9A800; color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
@@ -931,19 +937,39 @@ main.home-main {
 }
 
 .level-card .more-info {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fff;
   border: 1px solid #fff;
-  color: #fff;
+  color: #023E8A;
   font-size: 1.05rem;
+  text-shadow: none;
 }
 
 .level-card .more-info:hover,
 .level-card .more-info:focus-visible {
-  background-color: #fff;
-  color: var(--dark-navy);
+  background-color: var(--dark-navy);
+  color: #fff;
   text-shadow: none;
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+/* NP card uses a light background, so text and button go dark */
+.np-card h3,
+.np-card .level-price {
+  color: #023E8A;
+}
+
+.np-card .more-info {
+  background-color: #023E8A;
+  border-color: #023E8A;
+  color: #fff;
+}
+
+.np-card .more-info:hover,
+.np-card .more-info:focus-visible {
+  background-color: var(--dark-navy);
+  border-color: var(--dark-navy);
+  color: #fff;
 }
 
 .more-info {
