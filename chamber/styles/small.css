@@ -40,33 +40,8 @@ body {
   flex-direction: column;
 }
 
-/* 1. SITE-PLAN HEADER EXTRAS (base header defined once below) */
-header h1 {
-  font-family: var(--font-main);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--dark-navy);
-  margin: 0;
-}
-
-header .course-subtitle {
-  font-size: 1rem;
-  color: var(--secondary-color);
-  font-weight: 500;
-  margin: 0;
-}
-
-header #theme-btn {
-  background: none;
-  border: none;
-  font-size: 1.3rem;
-  cursor: pointer;
-}
-
-/* 2. SHARED MAIN (defined once in directory section) + SECTIONS */
+/* 1. SHARED MAIN (defined once in directory section) + SECTIONS */
 section {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
   padding: 2rem;
   margin-bottom: 2rem;
   box-shadow: 0 3px 10px rgba(3, 4, 94, 0.05);
@@ -92,60 +67,7 @@ section h3 {
   margin: 1.25rem 0 0.75rem 0;
 }
 
-/* 3. CENTERED SITE MAP LIST */
-section ul {
-  list-style: none;        /* Remove default bullets for a clean centered look */
-  padding: 0;
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* Align list items along the center axis */
-  gap: 0.5rem;
-  text-align: center;
-}
-
-section ul li {
-  margin: 0;
-  font-size: 1.05rem;
-  color: var(--text-dark);
-}
-
-/* 4. SIDE-BY-SIDE COLOR PALETTE SWATCHES */
-.color-palette {
-  display: flex;
-  flex-wrap: wrap;       /* Wraps cleanly on smaller screens */
-  gap: 0.75rem;          /* Spacing between swatches */
-  margin-bottom: 1.5rem;
-}
-
-.swatch {
-  flex: 1 1 120px;       /* Distributes width evenly side by side */
-  min-height: 80px;
-  padding: 0.75rem;
-  border-radius: var(--border-radius);
-  color: #FFFFFF;
-  font-weight: 600;
-  font-size: 0.85rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.swatch.dark-navy { background-color: var(--dark-navy); }
-.swatch.primary   { background-color: var(--primary-color); }
-.swatch.secondary { background-color: var(--secondary-color); }
-.swatch.accent-1  { background-color: var(--accent-1); }
-.swatch.accent-2  { background-color: var(--accent-2); }
-.swatch.background {
-  background-color: var(--bg-color);
-  color: var(--dark-navy);
-  border: 1px solid var(--border-color);
-}
-
-/* 5. CENTERED WIREFRAMES & IMAGES */
-.wireframes-container,
+/* 2. CENTERED IMAGES */
 section img {
   display: block;
   margin: 1.5rem auto;     /* Center images horizontally */
@@ -156,17 +78,7 @@ section img {
   box-shadow: 0 4px 12px rgba(3, 4, 94, 0.1);
 }
 
-.wireframe-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;     /* Align wireframe card items to center */
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-}
-
-/* 6. FOOTER STYLES */
+/* 3. FOOTER STYLES */
 footer {
   background-color: var(--dark-navy);
   color: #ffffff;
@@ -329,16 +241,33 @@ main h1 {
   margin-bottom: 2rem;
 }
 
-.views button {
-  background-color: var(--secondary-color);
-  color: #ffffff;
-  border: none;
-  padding: 0.7rem 1.85rem;
-  font-size: 1.05rem;
+/* Shared button base (colors and sizes stay per-button) */
+.views button,
+.submit-btn,
+.more-info,
+.close-modal {
   font-weight: 700;
   border-radius: var(--border-radius);
+  color: #fff;
+}
+
+.views button,
+.submit-btn,
+.close-modal {
+  border: none;
   cursor: pointer;
+}
+
+.views button,
+.submit-btn,
+.more-info {
   transition: var(--transition);
+}
+
+.views button {
+  background-color: var(--secondary-color);
+  padding: 0.7rem 1.85rem;
+  font-size: 1.05rem;
 }
 
 .views button.active,
@@ -356,11 +285,27 @@ main h1 {
   gap: 1.75rem;
 }
 
-#members.grid .member-card {
+/* Shared card base (padding and shadow stay per-card) */
+section,
+.join-form fieldset {
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
+}
+
+#members.grid .member-card,
+#members.list .member-card,
+.spotlight-grid .member-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+}
+
+#members.grid .member-card,
+.spotlight-grid .member-card {
   padding: 1.5rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#members.grid .member-card {
   display: flex;
   flex-direction: column;
 }
@@ -445,9 +390,7 @@ main h1 {
 }
 
 #members.list .member-card {
-  background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
   padding: 1rem 1.25rem;
 }
@@ -780,12 +723,7 @@ main.home-main {
   gap: 1.75rem;
 }
 
-.spotlight-grid .member-card {
-  background-color: var(--card-bg);
-  border-radius: var(--border-radius);
-  padding: 1.5rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-}
+/* Spotlights reuse the shared card base above */
 
 /* ===================================================
    8. JOIN PAGE: FORM + MEMBERSHIP CARDS + MODALS
@@ -827,10 +765,8 @@ body.join-page {
 
 .join-form fieldset {
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
   padding: 1.25rem;
   margin-bottom: 1.5rem;
-  background-color: var(--card-bg);
 }
 
 .join-form legend {
@@ -891,14 +827,8 @@ body.join-page {
 .submit-btn {
   width: 100%;
   background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: var(--border-radius);
   padding: 0.9rem 1.5rem;
   font-size: 1.1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--transition);
 }
 
 .submit-btn:hover,
@@ -994,12 +924,8 @@ body.join-page {
 .more-info {
   display: inline-block;
   background-color: var(--secondary-color);
-  color: #fff;
   text-decoration: none;
-  font-weight: 700;
   padding: 0.55rem 1.4rem;
-  border-radius: var(--border-radius);
-  transition: var(--transition);
 }
 
 .more-info:hover,
@@ -1056,12 +982,7 @@ dialog ul li {
   display: block;
   margin: 0 auto;
   background-color: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: var(--border-radius);
   padding: 0.6rem 2rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 .close-modal:hover {
