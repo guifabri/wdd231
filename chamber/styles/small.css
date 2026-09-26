@@ -797,10 +797,26 @@ body.join-page {
     url("../images/pedro-maria-urena.webp") center top / cover no-repeat;
 }
 
+.join-main > h1 {
+  display: table;
+  margin: 0 auto 1rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--dark-navy);
+  padding: 0.5rem 1.75rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
 .join-intro {
+  display: table;
+  max-width: 100%;
+  margin: 0 auto 2rem;
   text-align: center;
-  color: var(--text-muted);
-  margin-bottom: 2rem;
+  color: var(--text-dark);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 
 .join-layout {
@@ -820,9 +836,13 @@ body.join-page {
 
 .join-form legend {
   font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--primary-color);
-  padding: 0 0.5rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--dark-navy);
+  background-color: #fff;
+  padding: 0.25rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
 }
 
 .join-form label {
