@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Burger Delivery | Menu</title>
+  <meta name="description" content="Fast Burger Delivery menu. 15 burgers, fries, tacos and drinks with prices and photos. Filter by burgers and drinks.">
+  <meta name="author" content="Erick Leonardo Scala García">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Fast Burger Delivery | Menu">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/burger-01.webp">
+  <meta property="og:url" content="menu.html">
+  <meta property="og:description" content="See the Fast Burger Delivery menu with 15 tasty options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+  <script type="module" src="scripts/menu.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="brand">
+        <img src="images/burger-01.webp" alt="Fast Burger Delivery logo" width="44" height="30">
+        <span>Fast Burger Delivery</span>
+      </div>
+      <button id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
+    </div>
+    <nav class="navigation" aria-label="Primary Navigation">
+      <ul id="primaryNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="menu-main">
+    <h1>Our Menu</h1>
+    <p class="menu-intro">The food list is here. It comes from a menu.json file.</p>
+    <div class="filter-controls" role="group" aria-label="Menu filter controls">
+      <button type="button" data-filter="all" class="active">All</button>
+      <button type="button" data-filter="burger">Burgers</button>
+      <button type="button" data-filter="fries">Fries</button>
+      <button type="button" data-filter="taco">Tacos</button>
+      <button type="button" data-filter="drink">Drinks</button>
+    </div>
+    <p id="menu-count" aria-live="polite"></p>
+    <p id="menu-error" role="alert"></p>
+    <div id="menu-grid" class="menu-grid" aria-live="polite"></div>
+    <dialog id="item-dialog" aria-label="Food details"></dialog>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Fast Burger Delivery | Erick Leonardo Scala García | WDD 231</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+</body>
+</html>

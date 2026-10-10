@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Burger Delivery | Contact</title>
+  <meta name="description" content="Fast Burger Delivery contact and order form. Send your name, email, food and quantity.">
+  <meta name="author" content="Erick Leonardo Scala García">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Fast Burger Delivery | Contact">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/burger-02.webp">
+  <meta property="og:url" content="contact.html">
+  <meta property="og:description" content="Order fast food with a simple form.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="brand">
+        <img src="images/burger-01.webp" alt="Fast Burger Delivery logo" width="44" height="30">
+        <span>Fast Burger Delivery</span>
+      </div>
+      <button id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
+    </div>
+    <nav class="navigation" aria-label="Primary Navigation">
+      <ul id="primaryNav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-main">
+    <h1>Order Food</h1>
+    <p class="contact-intro">A simple form: name, email, and what you want to order.</p>
+    <div class="contact-layout">
+      <form method="get" action="order-confirm.html" class="order-form">
+        <label>Name*
+          <input type="text" name="name" title="Your full name" autocomplete="name" required>
+        </label>
+        <label>Email Address*
+          <input type="email" name="email" title="Your email address" autocomplete="email" placeholder="example@email.com" required>
+        </label>
+        <label>Food*
+          <input type="text" name="food" title="Food you want to order" autocomplete="off" placeholder="e.g. Classic Burger" required>
+        </label>
+        <label>Quantity*
+          <input type="number" name="quantity" title="Quantity to order" min="1" max="20" value="1" required>
+        </label>
+        <input type="hidden" name="timestamp" id="timestamp">
+        <input type="submit" value="Send Order" class="submit-btn">
+      </form>
+      <aside class="contact-info" aria-label="Delivery info">
+        <h2>Delivery Info</h2>
+        <p>Fast delivery in Ureña. Easy and simple.</p>
+        <p>See the <a href="menu.html">menu</a> first, then send your order.</p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Fast Burger Delivery | Erick Leonardo Scala García | WDD 231</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+
+</body>
+</html>

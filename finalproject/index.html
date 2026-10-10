@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Burger Delivery | Home</title>
+  <meta name="description" content="Fast Burger Delivery home. Welcome, see tasty burgers, fries, tacos and drinks with fast delivery.">
+  <meta name="author" content="Erick Leonardo Scala García">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="Fast Burger Delivery | Home">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero-burger.webp">
+  <meta property="og:url" content="index.html">
+  <meta property="og:description" content="Welcome to Fast Burger Delivery. See the menu and order fast food.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="brand">
+        <img src="images/burger-01.webp" alt="Fast Burger Delivery logo" width="44" height="30">
+        <span>Fast Burger Delivery</span>
+      </div>
+      <button id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
+    </div>
+    <nav class="navigation" aria-label="Primary Navigation">
+      <ul id="primaryNav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="home-main">
+    <h1>Fast Burger Delivery</h1>
+    <section class="hero">
+      <img src="images/hero-burger.webp" alt="Tasty burger and fries" width="1200" height="600" fetchpriority="high">
+      <div class="hero-content">
+        <h2>Welcome</h2>
+        <p>See the menu and order fast food. Easy and simple.</p>
+        <a href="menu.html" class="cta">See Menu</a>
+      </div>
+    </section>
+
+    <div class="home-grid">
+      <section>
+        <h2>Why Fast Burger</h2>
+        <p>15 tasty options: burgers, fries, tacos and drinks. Small photos load fast with lazy loading.</p>
+      </section>
+      <section>
+        <h2>How It Works</h2>
+        <p>1. See the menu. 2. Pick your favorite. 3. Send the order form. Easy to check.</p>
+        <p><a class="cta secondary" href="contact.html">Order Now</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Fast Burger Delivery | Erick Leonardo Scala García | WDD 231</p>
+    <p id="lastModified"></p>
+    <p><a href="attributions.html">Attributions</a></p>
+  </footer>
+</body>
+</html>
