@@ -168,3 +168,35 @@
     font-size: 1.25rem;
   }
 }
+
+/* ===================================================
+   DISCOVER - LARGE (1025px and above)
+   3-column mosaic with named areas, different from
+   small (1 col stack) and medium (2 col mix).
+   Hover effect ONLY on large/medium, not mobile.
+   =================================================== */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card1 card2"
+      "card3 card4 card4"
+      "card5 card6 card7"
+      "card8 card8 card8";
+    gap: 2rem;
+  }
+
+  .discover-hero img {
+    aspect-ratio: 21 / 8;
+  }
+
+  .discover-card img {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(3, 4, 94, 0.25);
+    filter: saturate(1.15) contrast(1.05);
+  }
+}

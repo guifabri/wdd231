@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover | Ureña Chamber of Commerce</title>
+  <meta name="description" content="Discover Ureña trade, businesses and places of interest. Explore the Ureña Chamber of Commerce area, cross-border opportunities and community highlights.">
+  <meta name="author" content="Erick Leonardo Scala García">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Facebook Open Graph Meta Tags -->
+  <meta property="og:title" content="Discover Ureña | Ureña Chamber of Commerce">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://guifabri.github.io/wdd231/chamber/images/discover-1-parque-pedro-maria.webp">
+  <meta property="og:url" content="https://guifabri.github.io/wdd231/chamber/discover.html">
+  <meta property="og:description" content="Discover Ureña trade, businesses and places of interest with the Ureña Chamber of Commerce.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets: small base (320-640), medium (641-1024), larger (1025+) -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px)">
+  <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 1025px)">
+
+  <!-- JavaScript Files -->
+  <script src="scripts/navigation.js" defer></script>
+  <script type="module" src="scripts/discover.js"></script>
+</head>
+<body>
+
+  <header>
+  <div class="header-top">
+    <div class="brand">
+      <img src="images/logo.svg" alt="Ureña Chamber of Commerce Logo">
+      <span>Ureña Chamber of Commerce</span>
+    </div>
+    <button id="menuButton" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primaryNav">&#9776;</button>
+  </div>
+  <nav class="navigation" aria-label="Primary Navigation">
+    <ul id="primaryNav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html" class="active">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="discover-main">
+    <h1>Discover Ureña</h1>
+    <p id="visit-message" class="visit-message" aria-live="polite"></p>
+
+    <!-- Responsive hero: Pedro María Ureña redimensioned per viewport -->
+    <picture class="discover-hero">
+      <source media="(min-width: 1025px)" srcset="images/pedro-maria-urena-large.webp" type="image/webp">
+      <source media="(min-width: 641px)" srcset="images/pedro-maria-urena-medium.webp" type="image/webp">
+      <img src="images/pedro-maria-urena.webp" alt="Pedro María Ureña park, Ureña, Táchira" width="1200" height="600" fetchpriority="high">
+    </picture>
+
+    <div id="discover-grid" class="discover-grid" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <div class="footer-info">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>123 Main Street, Cityville</p>
+      <p>info@chamber.org | (123) 456-7890</p>
+    </div>
+    <div class="footer-dev">
+      <p>&copy; <span id="currentyear"></span> | Erick Leonardo Scala García | WDD 231</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+
+</body>
+</html>

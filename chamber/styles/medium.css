@@ -1,0 +1,32 @@
+/* ===================================================
+   DISCOVER - MEDIUM (641px to 1024px)
+   Course: WDD 231 - Web Frontend Development I
+   Grid uses named areas, different from small/large.
+   Hover effect ONLY here and in larger.css (not mobile).
+   =================================================== */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+  .discover-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3"
+      "card4 card5"
+      "card6 card6"
+      "card7 card8";
+    gap: 1.5rem;
+  }
+
+  .discover-hero img {
+    aspect-ratio: 16 / 7;
+  }
+
+  .discover-card img {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  }
+
+  .discover-card img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(3, 4, 94, 0.25);
+    filter: saturate(1.15) contrast(1.05);
+  }
+}
